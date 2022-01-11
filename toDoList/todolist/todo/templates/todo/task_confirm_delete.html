@@ -1,0 +1,17 @@
+{% extends 'todo/main.html' %}
+
+{% block content %}
+<div class="header-bar">
+    <a href="{% url 'task' %}">&#8592; Назад</a>
+
+</div>
+<div class="card-body">
+    <form action="" method="post">
+        {% csrf_token %}
+    
+        <p>Ви впевнені, що хочете видалити цю задачу - <b><i>{{task}}</i></b></p>
+        <input class="button" type="submit" value="Так, видалити">
+    </form>
+</div>
+
+{% endblock content %}
